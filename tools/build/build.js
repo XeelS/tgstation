@@ -213,7 +213,7 @@ export const BuildTarget = new Juke.Target({
 export const ServerTarget = new Juke.Target({
   dependsOn: [BuildTarget],
   executes: async ({ get }) => {
-    const port = get(PortParameter) || '1337';
+    const port = get(PortParameter) || '45845';
     await DreamDaemon(`${DME_NAME}.dmb`, port, '-trusted');
   },
 });
